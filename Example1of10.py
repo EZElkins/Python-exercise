@@ -95,6 +95,7 @@ def order_of_year(year, month, day):
 		print ('输入的日子不合适')
 
 order_of_year(year, month, day)
+print ('====================separate line====================')
 
 '''5.输入三个整数x,y,z，请把这三个数由小到大输出。'''
 x = int(input('x:'))
@@ -105,6 +106,7 @@ list1 = [x, y ,z]
 list1.sort()
 
 print (list1)
+print ('====================separate line====================')
 
 '''6.斐波那契数列。'''
 def fibonacci_sequence(n):	#n表示多少以内
@@ -115,3 +117,36 @@ def fibonacci_sequence(n):	#n表示多少以内
 		print(a)
 
 fibonacci_sequence(100)
+print ('====================separate line====================')
+
+'''7.将一个列表的数据复制到另一个列表中。'''
+a = [6, 5, 10, 8 ,9, 23]
+b = a[:]	#不会随着a的改变而改变
+c = a 		#会随着a的改变而改变
+print (a, b, c)
+a.sort()
+print (a, b, c)
+print ('====================separate line====================')
+
+'''8.输出 9*9 乘法口诀表'''
+for x in range(1, 10):
+	for y in range(1, x + 1):
+		print ('%d * %d = %d\t' %(x, y, x * y), end = '')	#Python3中默认end = '\n'
+	print ('\n')
+print ('====================separate line====================')
+
+'''9.暂停一秒输出。'''
+import time as t
+print ('当前时间：', t.localtime())
+t.sleep(1)
+print ('当前时间：', t.localtime())
+print ('====================separate line====================')
+
+'''10.暂停一秒输出，并格式化当前时间'''
+def get_current_time():
+	now = t.strftime('%Y-%m-%d %H:%M:%S', t.localtime())
+	print(now)
+	
+get_current_time()
+t.sleep(1)
+get_current_time()
